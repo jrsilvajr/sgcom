@@ -23,17 +23,17 @@
               </form>
             </div>
             <div class="box-header">
-              <button  type="submit" class="btn btn-primary">Nova</button>
-              <a href="{{action('OpmController@nova')}}" class="btn btn-info " >Nova</a>
+              <button  type="submit" class="btn btn-primary">Nova OPM</button>
+             
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
-                <thead>hhhhhhh
+                <thead>
                 <tr>
                   <th>#</th></th>
                   <th>OPM</th>
-                  <th>CPR</th>
+                  <th>Descrição</th>
                   <th></th>
                   <th></th>
                 </tr>
@@ -43,7 +43,7 @@
                 <tr>
                   <td>{{$opm->id}}</td>
                   <td>{{$opm->opm_sigla}}</td>
-                  <td>{{$opm->cpr->sigla}}</td>
+                  <td>{{$opm->descricao}}</td>
                 </tr>
                 @empty
                 @endforelse 

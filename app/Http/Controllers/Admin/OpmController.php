@@ -18,6 +18,14 @@ class OpmController extends Controller
 
     }
 
+    public function nova()
+    {
+      $opms = Opm::paginate($this->totalPage);
+
+      return view('admin.opm.index', compact('opms'));
+
+    }
+
     public function searchOpm(Request $request, Opm $opm)
     {
       // dd($request->all());
